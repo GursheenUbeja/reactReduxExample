@@ -4,12 +4,11 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from  'redux';
 
 class UserList extends ReactDOM.Component{
-
-    
-
+   
 createList(){
+    debugger;
     return this.props.users.map((user)=>{
-        return(<li key={this.user.id}>{user.first}</li>);
+        return(<li key={user.id}>{user.first}</li>);
     });
 }
 
@@ -22,9 +21,10 @@ render(){
 }
 }
 
-function mapStateToProps(state){
-
-    users : state.users;
+const mapStateToProps = (state,props) => {
+return{
+    users : state.users
+    }
 }
 
 
