@@ -26,8 +26,10 @@ class WeatherApp extends React.Component {
         e.preventDefault();
         const city = 'London';
         const country = 'uk';
-        const api_call = await fetch('https://cors.io/?http://samples.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}');
-        const data = await api_call.json();
+       // const api_call = await fetch('http://cors.io/?http://samples.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}');
+        
+       const api_call = await fetch('http://cors.io/?http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=59cbfeaba9c01374870ed374382aaa20');
+       const data = await api_call.json();
         console.log(data);
 
 

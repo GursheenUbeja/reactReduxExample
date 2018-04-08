@@ -8,6 +8,8 @@ var config = {
        inline: true,
        port: 9090
     },
+
+
     module: {
        loaders: [
           {
@@ -17,6 +19,14 @@ var config = {
              query: {
                 presets: ['es2015', 'react']
              }
+          },
+          {
+            test: /\.less$/,
+            loader: 'style!css!less'
+          },
+          {
+            test: /\.css$/, // Only .css files
+            loader: 'css-loader'
           }
        ]
     }
