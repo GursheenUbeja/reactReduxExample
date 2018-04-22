@@ -46,7 +46,7 @@ class Notes extends React.Component{
         <div>
             <textarea ref = "newText"/>
             <button onClick={this.save}>Save</button>  
- </div>);
+            </div>);
     }
 
     
